@@ -4,7 +4,7 @@ public class BinarySearch {
         int e = arr.length - 1;
 
         while (s <= e) {
-          int   mid = s+(e-s) / 2;
+            int mid = (s+e) / 2;
             if (arr[mid] > x) {
                 e = mid - 1;
             } else if (arr[mid] < x) {
@@ -20,9 +20,10 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 8, 14,};
-        int ch = 5;
-        int gh = Search(arr, ch);
+
+        int gh = Search(arr, 4);
         System.out.println(gh);
+
 
     }
 }

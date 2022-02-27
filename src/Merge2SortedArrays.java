@@ -6,11 +6,10 @@ public class Merge2SortedArrays {
     }
 
     public static int[] merge2SortedArrays(int[] arr1, int[] arr2) {
-        int m = arr1.length;
-        int n = arr2.length;
-        int[] arr = new int[m + n];
+
+        int[] arr = new int[arr1.length + arr2.length];
         int i = 0, j = 0, k = 0;
-        while (i < m && j < n) {
+        while (i < arr1.length && j < arr2.length) {
             if (arr1[i] <= arr2[j]) {
                 arr[k] = arr1[i];
                 i++;
@@ -21,12 +20,12 @@ public class Merge2SortedArrays {
                 k++;
             }
         }
-        while (i < m) {
+        while (i < arr1.length) {
             arr[k] = arr1[i];
             i++;
             k++;
         }
-        while (j < n) {
+        while (j < arr2.length) {
             arr[k] = arr2[j];
             j++;
             k++;

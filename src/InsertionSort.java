@@ -6,10 +6,10 @@ public class InsertionSort {
     }
 
     public static void insertionSort(int[] arr) {
-        for (int i = 1; i < arr.length ; i++) {
+        for (int i = 1; i < arr.length  ; i++) {
             //Insert ith element in sorted portion
-            int j = i - 1;
-            int temp = arr[i];
+            int j = i - 1;// here our jth element will start form the j-1 element
+            int temp = arr[i];   // here if we store the arr[i] then the condition will be false .. ...
             while (j >= 0 && arr[j] > temp) {
                 arr[j + 1] = arr[j];
                 j--;
